@@ -58,9 +58,10 @@ include 'headerAdmin.php';
                                              <td>' . $row['ProductPrice'] . '</td>
                                              <td>' . $row['ProductSale'] . '</td>
                                              <td>' . $row['CategoryName'] . '</td>
-                                             <td><form>
-                                             <button type="button" name="button1" class="btn btn-success" >Update</button>
-                                             <button type="button" name="button2" class="btn btn-danger" >Delete</button>
+                                             <td>
+                                             <form method="post" action="DeleteUpdateProduct.php">
+                                             <button type="submit" name="update" value="'.$row['ProductID'].'" class="btn btn-success" >Update</button>
+                                             <button type="submit" name="delete" value="'.$row['ProductID'].'" class="btn btn-danger" >Delete</button>
                                            </form></td>
                                           </tr>';
                            }
