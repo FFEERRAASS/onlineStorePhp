@@ -89,7 +89,7 @@ include 'header.php';
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 				<div class="form-group">
 					<label for="website">Image</label>
-					<input type="file" class="form-control" name="image"   >
+					<input type="file" class="form-control"  name="image"   >
 				</div><br><br>
 			</div>
             <br><br>

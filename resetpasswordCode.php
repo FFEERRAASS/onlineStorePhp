@@ -25,12 +25,12 @@ function sendEmailRest($email,$Pass){
     $mail-> isSMTP();
     $mail->Host='smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username='mutasemshboul6@gmail.com';
-    $mail->Password ='knvbblyalpbrcbaq';
+    $mail->Username='neptune.shop2023@gmail.com';
+    $mail->Password ='ekaftmoqkqvyeiyz';
     $mail->SMTPSecure='ssl';
     $mail-> Port = 465;
 
-    $mail-> setFrom('mutasemshboul6@gmail.com');
+    $mail-> setFrom('neptune.shop2023@gmail.com');
     $mail->addAddress($email);
     $mail->isHTML(true);
     $mail->Subject='Neptune Shop ';
