@@ -76,17 +76,20 @@ $a = $connection;
                     <div class="team-item">
                         <h5>'.$row['ProductName'].'</h5>
                         <p class="mb-4"></p>
-                        <a><img class="img-fluid rounded-circle w-100 mb-4" src=uploads/'.$row['Imagepath'].'  style="max-width:150px;max-height:150px;min-height:150px;min-width:150px"></a>
+                        <a><img class="img-fluid rounded-circle w-100 mb-4" src=uploads/'.$row['Imagepath'].'  style="max-width:200px;max-height:200px;min-height:200px;min-width:200px"></a>
                         <h6>'.$row['ProductPrice'].' JD</h6>
 
 
 
                         <div class="d-flex justify-content-center">
-
-                        <form method="post" action="addcart.php">
-                        <input type="submit" class="btn btn-outline-success" value="'.$row['ProductID'].'"  name="cart" style="background-color:white" </>
+<form method="post" action="addcart.php">
+                        <button type="submit" class="btn btn-outline-success" value="'.$row['ProductID'].'"  name="cart" style="background-color:white" >🛒</button>
                             <h5>&nbsp;</h5>
-                            <input type="submit" class="btn btn-outline-success" style="background-color:white" name="HandId" value="⭐" onclick="fav()" />
+                            </form>
+                            <h5>&nbsp;</h5><h5>&nbsp;</h5>
+                            <form method="post" action="addFav.php">
+
+                            <button type="submit" class="btn btn-outline-success" style="background-color:white" value="'.$row['ProductID'].'" name="fav" onclick="fav()" >⭐</button>
                             </form>
                         </div>
 

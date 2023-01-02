@@ -45,8 +45,8 @@
         <!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="index.html" class="navbar-brand p-0">
-                    <h1 class="m-0">BizConsult</h1>
+                <a href="homepage.php" class="navbar-brand p-0">
+                    <h1 class="m-0">Neptune Shop</h1>
                     <!-- <img src="asessts1/img/logo.png" alt="Logo"> -->
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -57,19 +57,20 @@
                         <a href="homepage.php" class="nav-item nav-link ">Home</a>
                         <a href="about.php" class="nav-item nav-link">About</a>
                         <a href="product.php" class="nav-item nav-link">Product</a>
+                        <a href="contact.php" class="nav-item nav-link">Contact</a>
+
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">More</a>
                             <div class="dropdown-menu m-0">
-                                <a href="feature.html" class="dropdown-item">Features</a>
-                                <a href="quote.html" class="dropdown-item">Free Quote</a>
-                                <a href="team.html" class="dropdown-item">Our Team</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <a href="404.html" class="dropdown-item">404 Page</a>
+                                <a href="testimonial.php" class="dropdown-item">Testimonial</a>
+                                <a href="payment.php" class="dropdown-item">Cart Shopping</a>
+                                <a href="favourite.php" class="dropdown-item">Favourite</a>
+                                <a href="updateprofile.php" class="dropdown-item">Profile</a>
+
                             </div>
                         </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
-                    <a href="" class="btn btn-light rounded-pill text-primary py-2 px-4 ms-lg-5">Free Quote</a>
+                    <a href="logout.php" class="btn btn-light rounded-pill text-primary py-2 px-4 ms-lg-5">Logout</a>
                 </div>
             </nav>
 

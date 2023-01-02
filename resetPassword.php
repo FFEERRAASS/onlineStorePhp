@@ -1,36 +1,4 @@
-<?php
-include 'connection.php';
-if(isset($_POST['submit'])){
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $sql = "select * from users where Email='$email' && Password='$password'";
-    $result = mysqli_query($connection,$sql);
-    //$row = mysqli_fetch_array($result);
-    
-    while($row = mysqli_fetch_array($result)){
-        
-        session_start();
-        $_SESSION['UserID']=$row['User_ID'];
-		$_SESSION['Email']=$row['Email'];
-		if($row['RoleFk']==1){
-			header('location:homepage.php');
 
-		}
-		else{
-			header('location:Dashbord.php');
-		}
-
-        
-
-    }
-
-
-    
-}
-
-
-
-?>
 
 
 <!DOCTYPE html>
@@ -65,9 +33,9 @@ if(isset($_POST['submit'])){
 					<img src="asessts/images/img-01.png" alt="IMG">
 				</div>
 
-				<form class="login100-form validate-form" method="post" action="login.php">
+				<form class="login100-form validate-form" method="post" action="resetpasswordCode.php">
 					<span class="login100-form-title">
-						Member Login
+						Reset Password 
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
@@ -78,30 +46,17 @@ if(isset($_POST['submit'])){
 						</span>
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate = "Password is required">
-						<input class="input100" type="password" name="password" placeholder="Password">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<i class="fa fa-lock" aria-hidden="true"></i>
-						</span>
-					</div>
+					
 
 					
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn" name="submit">
 							
-							Login
+							Reset Password
 						</button>
 					</div>
 
-					<div class="text-center p-t-12">
-						<span class="txt1">
-							Forgot
-						</span>
-						<a class="txt2" href="resetPassword.php">
-							Username / Password?
-						</a>
-					</div>
+					
 
 					<div class="text-center p-t-136">
 						<a class="txt2" href="registration.php">

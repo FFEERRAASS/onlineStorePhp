@@ -8,7 +8,7 @@ include 'header.php';
     <div class="container">
         <div class="mx-auto text-center wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
             <!-- <div class="d-inline-block border rounded-pill text-primary px-4 mb-3">Our Team</div> -->
-            <h2 class="d-inline-block border rounded-pill text-primary px-4 mb-5">Our Products</h2>
+            <h2 class="d-inline-block border rounded-pill text-primary px-4 mb-5">My Favourite Products</h2>
         </div>
         <!-- <div class="row g-4">
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -84,7 +84,7 @@ include 'header.php';
 
                         <div class="d-flex justify-content-center">
 
-                        <form method="post" action="product.php">
+                        <form method="post" action="addcartFav.php">
                         <button type="submit" class="btn btn-outline-success" value="'.$row['ProductID'].'"   name="cart" style="background-color:white">Add to cart</button>
                             <h5>&nbsp;</h5>
                             </form>
