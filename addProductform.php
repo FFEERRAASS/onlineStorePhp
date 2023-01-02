@@ -25,7 +25,7 @@ include 'headerAdmin.php';
                            <input type="text" name="psale" />
                         </div>
                         <div class="field">
-                           <label class="label_field">Product Price</label>
+                           <label class="label_field">Product  Price</label>
                            <input type="text" name="pprice" />
                         </div>
                         <div class="field">
