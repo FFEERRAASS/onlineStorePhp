@@ -30,7 +30,7 @@ include 'headerAdmin.php';
                         </div>
                         <div class="field">
                            <label class="label_field">Product Iamge</label>
-                           <input type="file" name="pimage" />
+                           <input type="file" name="pimage" required />
                         </div>
                         <div class="field">
                         <div class="dropdown_section">
