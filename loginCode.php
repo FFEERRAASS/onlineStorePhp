@@ -1,8 +1,8 @@
 <?php
 include 'connection.php';
 if(isset($_POST['submit'])){
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+    $email = htmlspecialchars(stripcslashes(trim($_POST['email'])));
+    $password = htmlspecialchars(stripcslashes(trim($_POST['password'])));
     $sql = "select * from users where Email='$email' && Password='$password' and IsBlocked = 0";
     $result = mysqli_query($connection,$sql);
     //$row = mysqli_fetch_array($result);

@@ -3,9 +3,9 @@
 include 'connection.php';
 include 'sendemail.php';
 if (isset($_POST['submit'])) {
-    $fullname = $_POST['fullname'];
-    $username = $_POST['username'];
-    $email = $_POST['email'];
+    $fullname = htmlspecialchars(stripcslashes(trim($_POST['fullname'])));
+    $username = htmlspecialchars(stripcslashes(trim($_POST['username'])));
+    $email = htmlspecialchars(stripcslashes(trim($_POST['email'])));
     $image=$_FILES['image'];
     $img =$image['name'];
     copy($image['tmp_name'], 'uploads/'.$image['name']);
@@ -61,7 +61,7 @@ if (isset($_POST['submit'])) {
                     </span>
 
                     <div class="wrap-input100 validate-input" data-validate="Full name is required">
-                        <input class="input100" type="text" name="fullname" placeholder="Full name">
+                        <input class="input100" type="text" name="fullname" placeholder="Full name" minlength="8" required>
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
                             <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -69,7 +69,7 @@ if (isset($_POST['submit'])) {
                     </div>
 
                     <div class="wrap-input100 validate-input" data-validate="Username is required">
-                        <input class="input100" type="text" name="username" placeholder="Username">
+                        <input class="input100" type="text" name="username" placeholder="Username"minlength="8" required>
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
                             <i class="fa fa-lock" aria-hidden="true"></i>
@@ -85,7 +85,7 @@ if (isset($_POST['submit'])) {
 
 
                     <div class="wrap-input100 validate-input" data-validate="Password is required">
-                        <input class="input100" type="text" name="password" placeholder="Password">
+                        <input class="input100" type="text" name="password" placeholder="Password" minlength="8" required>
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
                             <i class="fa fa-lock" aria-hidden="true"></i>
