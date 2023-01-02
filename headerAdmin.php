@@ -8,7 +8,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>Pluto - Responsive Bootstrap Admin Panel Templates</title>
+      <title>Neptune Shop - FERAS & MUTASEM</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -59,22 +59,19 @@
                   <h4>General</h4>
                   <ul class="list-unstyled components">
                      <li class="active">
-                        <a href="#dashboard" data-toggle="collapse" aria-expanded="false" ><i class="fa fa-dashboard yellow_color"></i> <span>Dashboard</span></a>
-                        
+                        <a href="Dashbord.php" ><i class="fa fa-dashboard yellow_color"></i> <span>Dashboard</span></a>
                      </li>
                     
-                     <li><a href="tables.html"><i class="fa fa-table purple_color2"></i> <span>Tables</span></a></li>
                      <li>
-                        <a href="#apps" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-object-group blue2_color"></i> <span>Apps</span></a>
+                        <a href="#apps" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-users blue2_color"></i> <span>Users</span></a>
                         <ul class="collapse list-unstyled" id="apps">
-                           <li><a href="email.html">> <span>Email</span></a></li>
-                           <li><a href="calendar.html">> <span>Calendar</span></a></li>
-                           <li><a href="media_gallery.html">> <span>Media Gallery</span></a></li>
+                           <li><a href="users.php"><span>Users</span></a></li>
+                           <li><a href="usersBlocked.php"> <span>Blocked Users</span></a></li>
                         </ul>
                      </li>
-                     <li><a href="price.html"><i class="fa fa-briefcase blue1_color"></i> <span>Pricing Tables</span></a></li>
+                     <li><a href="productadmin.php"><i class="fa fa-briefcase blue1_color"></i> <span>Product</span></a></li>
                      <li>
-                        <a href="contact.html">
+                        <a href="contactadmin.php">
                         <i class="fa fa-paper-plane red_color"></i> <span>Contact</span></a>
                      </li>
                      <li class="active">

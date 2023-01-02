@@ -124,84 +124,8 @@ $maxproduct = mysqli_fetch_array($resultmaxproduct);
                            </div>
                         </div>
                      </div>
-                     <div class="row column1 social_media_section">
-                        <div class="col-md-6 col-lg-3">
-                           <div class="full socile_icons fb margin_bottom_30">
-                              <div class="social_icon">
-                                 <i class="fa fa-facebook"></i>
-                              </div>
-                              <div class="social_cont">
-                                 <ul>
-                                    <li>
-                                       <span><strong>35k</strong></span>
-                                       <span>Friends</span>
-                                    </li>
-                                    <li>
-                                       <span><strong>128</strong></span>
-                                       <span>Feeds</span>
-                                    </li>
-                                 </ul>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3">
-                           <div class="full socile_icons tw margin_bottom_30">
-                              <div class="social_icon">
-                                 <i class="fa fa-twitter"></i>
-                              </div>
-                              <div class="social_cont">
-                                 <ul>
-                                    <li>
-                                       <span><strong>584k</strong></span>
-                                       <span>Followers</span>
-                                    </li>
-                                    <li>
-                                       <span><strong>978</strong></span>
-                                       <span>Tweets</span>
-                                    </li>
-                                 </ul>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3">
-                           <div class="full socile_icons linked margin_bottom_30">
-                              <div class="social_icon">
-                                 <i class="fa fa-linkedin"></i>
-                              </div>
-                              <div class="social_cont">
-                                 <ul>
-                                    <li>
-                                       <span><strong>758+</strong></span>
-                                       <span>Contacts</span>
-                                    </li>
-                                    <li>
-                                       <span><strong>365</strong></span>
-                                       <span>Feeds</span>
-                                    </li>
-                                 </ul>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3">
-                           <div class="full socile_icons google_p margin_bottom_30">
-                              <div class="social_icon">
-                                 <i class="fa fa-google-plus"></i>
-                              </div>
-                              <div class="social_cont">
-                                 <ul>
-                                    <li>
-                                       <span><strong>450</strong></span>
-                                       <span>Followers</span>
-                                    </li>
-                                    <li>
-                                       <span><strong>57</strong></span>
-                                       <span>Circles</span>
-                                    </li>
-                                 </ul>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
+                     
+                     
                   
                      <div class="row column3">
                         <!-- testimonial -->
@@ -221,19 +145,30 @@ $maxproduct = mysqli_fetch_array($resultmaxproduct);
                                              <div class="carousel-inner">
                                                 <div class="item carousel-item active">
                                                    <div class="img-box"><img src="images/layout_img/user_img.jpg" alt=""></div>
-                                                   <p class="testimonial">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae..</p>
-                                                   <p class="overview"><b>Michael Stuart</b>Seo Founder</p>
+                                                   <p class="testimonial"></p>
+                                                   <p class="overview"><b>Feras Al-khuzai</b>Software Enginner</p>
                                                 </div>
-                                                <div class="item carousel-item">
-                                                   <div class="img-box"><img src="images/layout_img/user_img.jpg" alt=""></div>
-                                                   <p class="testimonial">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae..</p>
-                                                   <p class="overview"><b>Michael Stuart</b>Seo Founder</p>
-                                                </div>
-                                                <div class="item carousel-item">
-                                                   <div class="img-box"><img src="images/layout_img/user_img.jpg" alt=""></div>
-                                                   <p class="testimonial">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae..</p>
-                                                   <p class="overview"><b>Michael Stuart</b>Seo Founder</p>
-                                                </div>
+                                             <?php 
+                                             $testimonial = "select * from testimonial inner join users on users.User_Id = testimonial.userID";;
+                                             $result = mysqli_query($connection,$testimonial);
+                                             while ($row = mysqli_fetch_array($result)){
+
+                                             
+                                           
+                                                echo '<div class="item carousel-item">
+                                                   <div class="img-box"><img src="uploads/'.$row['ImagePath'].'" alt=""></div>
+                                                   <p class="testimonial">'.$row['message'].'</p>
+                                                   <p class="overview"><b>'.$row['FullName'].'</b>'.$row['Email'].'</p>
+
+                                                  
+
+                                                </div>';
+                                                
+                                             
+                                    
+                                             
+                                          }
+                                             ?>
                                              </div>
                                              <!-- Carousel controls -->
                                              <a class="carousel-control left carousel-control-prev" href="#testimonial_slider" data-slide="prev">
@@ -265,15 +200,23 @@ $maxproduct = mysqli_fetch_array($resultmaxproduct);
                                  </div>
                                  <div class="task_list_main">
                                     <ul class="task_list">
-                                       <li><a href="#">Meeting about plan for Admin Template 2018</a><br><strong>10:00 AM</strong></li>
-                                       <li><a href="#">Create new task for Dashboard</a><br><strong>10:00 AM</strong></li>
-                                       <li><a href="#">Meeting about plan for Admin Template 2018</a><br><strong>11:00 AM</strong></li>
-                                       <li><a href="#">Create new task for Dashboard</a><br><strong>10:00 AM</strong></li>
-                                       <li><a href="#">Meeting about plan for Admin Template 2018</a><br><strong>02:00 PM</strong></li>
+                                    <?php
+                                    $quer3= "Select * from contact ";
+                                    $result4=mysqli_query($connection,$quer3);
+                                    while($row = mysqli_fetch_array($result4)){
+
+                                    
+                                       echo'<li>
+                                          <p>'.$row['msg'].'</p><br><strong>'.$row['subject'].'</strong>
+                                          <p><small>'.$row['fullname'].'</small></p>
+                                    </li>';
+                                 }
+                                 ?>
+                                       
                                     </ul>
                                  </div>
                                  <div class="read_more">
-                                    <div class="center"><a class="main_bt read_bt" href="#">Read More</a></div>
+                                    <div class="center"><a class="main_bt read_bt" href="contactadmin.php">Read More</a></div>
                                  </div>
                               </div>
                            </div>
