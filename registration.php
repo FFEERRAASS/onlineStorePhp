@@ -1,25 +1,4 @@
-<?php
 
-include 'connection.php';
-include 'sendemail.php';
-if (isset($_POST['submit'])) {
-    $fullname = htmlspecialchars(stripcslashes(trim($_POST['fullname'])));
-    $username = htmlspecialchars(stripcslashes(trim($_POST['username'])));
-    $email = htmlspecialchars(stripcslashes(trim($_POST['email'])));
-    $image=$_FILES['image'];
-    $img =$image['name'];
-    copy($image['tmp_name'], 'uploads/'.$image['name']);
-    $password = $_POST['password'];
-    $sql = "insert into users values('','$username','$fullname','$email','$password',1,'$img',0)";
-    $result = mysqli_query($connection, $sql);
-    sendEmail($email);
-    header('location:login.php');
-
-}
-
-
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -55,7 +34,7 @@ if (isset($_POST['submit'])) {
                     <img src="asessts/images/img-01.png" alt="IMG">
                 </div>
 
-                <form class="login100-form validate-form" style="width: 1100;" method="post" action='registration.php' enctype="multipart/form-data">
+                <form class="login100-form validate-form" style="width: 1100;" method="post" action='regcode.php' enctype="multipart/form-data">
                     <span class="login100-form-title">
                         Member Login
                     </span>
@@ -85,7 +64,7 @@ if (isset($_POST['submit'])) {
 
 
                     <div class="wrap-input100 validate-input" data-validate="Password is required">
-                        <input class="input100" type="text" name="password" placeholder="Password" minlength="8" required>
+                        <input class="input100" type="password" name="password" placeholder="Password" minlength="8" required>
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
                             <i class="fa fa-lock" aria-hidden="true"></i>
@@ -93,7 +72,7 @@ if (isset($_POST['submit'])) {
                     </div>
 
                     <div class="form-group">
-                        <input type="file" name="image" class="form-control" />
+                        <input type="file" name="image" class="form-control" required/>
                     </div>
 
 

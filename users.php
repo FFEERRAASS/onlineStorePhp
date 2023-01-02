@@ -50,7 +50,7 @@ if(isset($_POST['block'])){
                                        </thead>
                                        <tbody>
                                         <?php 
-                                        $sql = "Select * from users where IsBlocked = '0'";
+                                        $sql = "Select * from users where IsBlocked = '0' and RoleFk = 1";
                                         $result=mysqli_query($connection,$sql);
                                         while($row = mysqli_fetch_array($result)){
 

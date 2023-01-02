@@ -8,7 +8,7 @@ if(isset($_POST['submit'])){
     
     //$row = mysqli_fetch_array($result);
     
-    while($row = mysqli_fetch_array($result)){
+    $row = mysqli_fetch_array($result);
         
         session_start();
         $_SESSION['UserID']=$row['User_ID'];
@@ -16,23 +16,19 @@ if(isset($_POST['submit'])){
         $_SESSION['RoleFk'] = $row['RoleFk'];
         $_SESSION['img'] = $row['ImagePath'];
         $_SESSION['Name'] = $row['FullName'];
-        if($row['IsBlocked']==1){
-            header('location:login.php');
+    
+    if($row['IsBlocked']==1){
+        header('location:login.php');
+
+    }
+    else{
+        if($row['RoleFk']==1){
+            header('location:homepage.php');
 
         }
         else{
-            if($row['RoleFk']==1){
-                header('location:homepage.php');
-    
-            }
-            else{
-                header('location:Dashbord.php');
-            }
+            header('location:Dashbord.php');
         }
-		
-
-        
-
     }
 
 
