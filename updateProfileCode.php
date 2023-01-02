@@ -9,7 +9,6 @@ $result = mysqli_query($connection,$sql);
 while($row = mysqli_fetch_array($result)){
     $imagepath=$row['ImagePath'];
 }
-echo $imagepath;
 if(isset($_POST['submit'])){
 
     global $connection;
