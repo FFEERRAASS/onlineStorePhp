@@ -10,7 +10,7 @@ if(empty($_SESSION['UserID'])){
 
 <head>
     <meta charset="utf-8">
-    <title>BizConsult - Consulting HTML Template</title>
+    <title>[FERAS & MUTASEM]</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -85,12 +85,9 @@ if(empty($_SESSION['UserID'])){
                 <div class="container">
                     <div class="row g-5 align-items-center">
                         <div class="col-lg-6 text-center text-lg-start">
-                            <h1 class="text-white mb-4 animated zoomIn">We Help To Push Your Business To The Top Level</h1>
-                            <p class="text-white pb-3 animated zoomIn">Tempor rebum no at dolore lorem clita rebum rebum ipsum rebum stet dolor sed justo kasd. Ut dolor sed magna dolor sea diam. Sit diam sit justo amet ipsum vero ipsum clita lorem</p>
-                            <a href="" class="btn btn-outline-light rounded-pill border-2 py-3 px-5 animated slideInRight">Learn More</a>
+                            <h1 class="text-white mb-4 animated zoomIn">Trees are a great divine blessing</h1>
                         </div>
                         <div class="col-lg-6 text-center text-lg-start">
-                            <img class="img-fluid animated zoomIn" src="asessts1/img/hero.png" alt="">
                         </div>
                     </div>
                 </div>
