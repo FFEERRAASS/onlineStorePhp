@@ -1,36 +1,4 @@
-<?php
-include 'connection.php';
-if(isset($_POST['submit'])){
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $sql = "select * from users where Email='$email' && Password='$password'";
-    $result = mysqli_query($connection,$sql);
-    //$row = mysqli_fetch_array($result);
-    
-    while($row = mysqli_fetch_array($result)){
-        
-        session_start();
-        $_SESSION['UserID']=$row['User_ID'];
-		$_SESSION['Email']=$row['Email'];
-		if($row['RoleFk']==1){
-			header('location:homepage.php');
 
-		}
-		else{
-			header('location:Dashbord.php');
-		}
-
-        
-
-    }
-
-
-    
-}
-
-
-
-?>
 
 
 <!DOCTYPE html>
@@ -65,7 +33,7 @@ if(isset($_POST['submit'])){
 					<img src="asessts/images/img-01.png" alt="IMG">
 				</div>
 
-				<form class="login100-form validate-form" method="post" action="login.php">
+				<form class="login100-form validate-form" method="post" action="loginCode.php">
 					<span class="login100-form-title">
 						Member Login
 					</span>

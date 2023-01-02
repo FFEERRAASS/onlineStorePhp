@@ -1,6 +1,12 @@
 <?php
 include 'connection.php';
 include 'headerAdmin.php';
+
+if(isset($_POST['unblock'])){
+   $userId = $_POST['unblock'];
+   $sql = "update users set IsBlocked = 0 where User_ID  = '$userId'";
+   mysqli_query($connection,$sql);
+}
 ?>
  <link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" rel="stylesheet" />
@@ -22,7 +28,7 @@ include 'headerAdmin.php';
                               <h2>Tables</h2>
                            </div>
                         </div>
-<div class="col-md-10" style="margin-left: 300px;margin-right:550px">
+<div class="col-md-9" style="margin-left: 300px;margin-right:550px">
                            <div class="white_shd full margin_bottom_60">
                               <div class="full graph_head">
                                  <div class="heading1 margin_0">
@@ -55,8 +61,8 @@ include 'headerAdmin.php';
                                              <td>'.$row['Username'].'</td>
                                              <td>'.$row['Email'].'</td>
                                              <td>
-                                             <form>
-                                             <button name="block" class="btn btn-success" value="'.$row['User_ID'].'">UnBlock</button>
+                                             <form method="post">
+                                             <button name="unblock" class="btn btn-success" value="'.$row['User_ID'].'">UnBlock</button>
                                              </form>
                                              </td>
                                           </tr>';
